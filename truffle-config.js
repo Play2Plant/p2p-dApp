@@ -18,48 +18,48 @@
  *
  */
 
-require('dotenv').config();
-const HDWalletProvider = require("@truffle/hdwallet-provider");
-const mnemonic = process.env.MNEMONIC.trim();
+// require('dotenv').config();
+// const HDWalletProvider = require("@truffle/hdwallet-provider");
+// const mnemonic = process.env.MNEMONIC.trim();
 
 
 module.exports = {
     networks: {
         
-//        development: {
-//           host: "localhost",
-//           port: 8545,
-//           network_id: "*",
-//           // websockets: true
-//        },
-        testnet: {
-            provider: () =>
-            new HDWalletProvider(
-                mnemonic,
-                `https://api.avax-test.network/ext/bc/C/rpc`,
-                0,
-                10
-            ),
-            network_id: "*",
-            gas: 6000000,
-            gasPrice: 225000000000,
-            networkCheckTimeout: 999999,
-            confirmations: 10,
-            skipDryRun: true,
-        },
-        mainnet: {
-            provider: () =>
-            new HDWalletProvider(
-                mnemonic,
-                `https://api.avax.network/ext/bc/C/rpc`,
-                0,
-                10
-            ),
-            network_id: "*",
-            networkCheckTimeout: 999999,
-            confirmations: 4,
-            skipDryRun: true,
-        },
+       development: {
+          host: "localhost",
+          port: 8545,
+          network_id: "*",
+          websockets: true
+       },
+        // testnet: {
+        //     provider: () =>
+        //     new HDWalletProvider(
+        //         mnemonic,
+        //         `https://api.avax-test.network/ext/bc/C/rpc`,
+        //         0,
+        //         10
+        //     ),
+        //     network_id: "*",
+        //     gas: 6000000,
+        //     gasPrice: 225000000000,
+        //     networkCheckTimeout: 999999,
+        //     confirmations: 10,
+        //     skipDryRun: true,
+        // },
+        // mainnet: {
+        //     provider: () =>
+        //     new HDWalletProvider(
+        //         mnemonic,
+        //         `https://api.avax.network/ext/bc/C/rpc`,
+        //         0,
+        //         10
+        //     ),
+        //     network_id: "*",
+        //     networkCheckTimeout: 999999,
+        //     confirmations: 4,
+        //     skipDryRun: true,
+        // },
     
     },
     compilers: {

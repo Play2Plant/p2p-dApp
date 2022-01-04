@@ -1,0 +1,13 @@
+/build
+/bin
+.abi
+.bin
+/node_modules
+/tmp
+/cmd/bin
+.env
+.env_fuji
+/installed_contracts
+*.lock
+*.log
+package-lock.json

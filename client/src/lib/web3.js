@@ -1,8 +1,10 @@
 import Web3 from 'web3'
 import NFTcontractBuild from './NFTcontract_abi.json'
 
-let walletAddress = ''
+var walletAddress = ''
+var network= '';
 let nftContract;
+
 // testnet 43113
 // mainnet 43114
 // ganache 1337
@@ -29,15 +31,17 @@ export const init = async () => {
 
     window.ethereum.on('chainChanged', function (network) {
         if (network == opcode_network) {
-            console.log('avax')
+            network = "avax"
         } else {
-            console.log('no-avax')
+            network = "not-avax"
         }
+      window.location.reload();
+
     })
 
     window.ethereum.on('disconnect', function () {
       console.log("disconnected")
-      // window.location.reload();
+      window.location.reload();
     })
   } else {
     console.log('no-metamask')
@@ -50,18 +54,17 @@ export const connectWallet = async () => {
     .request({
       method: 'eth_requestAccounts',
     })
-    .then((accounts) => {
+    .then(async (accounts) => {
       if (accounts[0]) {
         let web3 = new Web3(window.ethereum)
-        web3.eth.getChainId().then(async (network) => {
-          if (network == id_network && walletAddress) {
-            console.log('avax')
+        await web3.eth.getChainId().then(async (network) => {
+          if (network == id_network) {
+            network = "avax"
           } else {
-            console.log('no-avax')
+            network = "not-avax"
           }
         })
-        walletAddress = accounts[0]
-        return walletAddress
+          walletAddress = accounts[0]
       } else {
         return []
       }
@@ -70,6 +73,8 @@ export const connectWallet = async () => {
       console.log(err)
       return
     })
+    return walletAddress
+
 }
 
 export const switchChain = async () => {
@@ -82,6 +87,29 @@ export const switchChain = async () => {
       console.log(err)
       return
     })
+    window.location.reload();
+
+}
+
+export const checkNetwork = async () => {
+  // Check if browser is running Metamask
+  let web3
+  if (window.ethereum) {
+    web3 = new Web3(window.ethereum)
+
+
+    // Check if User is already connected by retrieving the accounts
+    return await web3.eth.getChainId().then(async (network) => {
+      if (network == id_network) {
+        network = "avax"
+      } else {
+        network = "not-avax"
+      }
+      return network 
+    })
+    
+    
+  }
 }
 
 export const checkConnection = async () => {
@@ -90,6 +118,14 @@ export const checkConnection = async () => {
   if (window.ethereum) {
     web3 = new Web3(window.ethereum)
 
+    await web3.eth.getChainId().then(async (network) => {
+      if (network == id_network ) {
+        network = "avax"
+      } else {
+        network = "not-avax"
+      }
+    })
+    
     // Check if User is already connected by retrieving the accounts
     await web3.eth.getAccounts().then(async (addr) => {
       if (addr[0]) {
@@ -97,17 +133,11 @@ export const checkConnection = async () => {
       } else {
           walletAddress = ""
       }
+      
     })
-
-    await web3.eth.getChainId().then(async (network) => {
-      if (network == id_network && walletAddress) {
-        console.log('avax')
-      } else {
-        console.log('no-avax')
-      }
-    })
-
+    
     return walletAddress
+
   }
 }
 
@@ -134,7 +164,7 @@ export const toggleClaim = async (addr) => {
 
   return await operand.send(params)
   .on('error', function (error) {
-      if (error.code == -32602) {
+      if (error.code === -32602) {
           params.type = "0x0";
           params.maxFeePerGas = null;
           params.maxPriorityFeePerGas= null;

@@ -9,6 +9,9 @@ import {
   checkConnection,
   getTokenURI,
   getTokensByAddress,
+  connectWallet,
+switchChain,
+checkNetwork
 } from '../lib/web3'
 import axios from 'axios'
 
@@ -18,6 +21,8 @@ const NFT = () => {
   const [price, setPrice] = useState(0)
   const [loading, setLoading] = useState(false)
   const [address, setAddress] = useState('')
+  const [network, setnetwork] = useState('')
+
   const [list, setlist] = useState([])
   const [nftList, setnftList] = useState([])
 
@@ -27,6 +32,7 @@ const NFT = () => {
     getTotalSupply()
     getTokens()
     checkAddress()
+    checkNetwork1()
   }, [])
 
   useEffect(() => {
@@ -47,6 +53,20 @@ const NFT = () => {
     }
     setnftList(ok)
   }
+
+  const checkNetwork1 = async () => {
+    const network = await checkNetwork()
+    setnetwork(network)
+   }
+ 
+  const switchNetwork = async () => {
+    await switchChain()
+   }
+ 
+   const storeAddress = async () => {
+       const address = await connectWallet()
+       setAddress(address)
+   }
 
   const checkAddress = async () => {
     const address = await checkConnection()
@@ -79,7 +99,7 @@ const NFT = () => {
 
   const getTokens = async () => {
     var urls = []
-    if (address) {
+    if (address && network === "avax") {
       const array = await getTokensByAddress(address)
 
       array.forEach(async (element) => {
@@ -90,12 +110,12 @@ const NFT = () => {
       })
     }
   }
-  console.log(list,nftList)
+
   return (
     <Container>
         {list.length > 0 ? (
              <Row>
-             <h1>My NFTs</h1>
+             <h1>My NFT</h1>
           {nftList.map((item, i) => (
               <Col
               xs={4}
@@ -144,13 +164,30 @@ const NFT = () => {
                 <div>{limit - totalSupply} / 10000 restant</div>
                 <br></br>
                 <div className="d-flex justify-content-center">
-                  <Button
-                    disabled={loading}
-                    variant="primary"
-                    onClick={() => mint()}
-                  >
-                    Mint {price}{' '}
+
+                
+                {address && network !== "avax" &&
+                  <Button onClick={() => switchNetwork()}>
+                    Switch Network
                   </Button>
+                }
+
+                  {address && network === "avax" &&
+                    <Button
+                      disabled={loading}
+                      variant="primary"
+                      onClick={() => mint()}
+                    >
+                      Mint {price}{' '}
+                    </Button>
+                  }
+
+                {!address &&
+                  <Button onClick={() => storeAddress()}>
+                    Connect
+                  </Button>
+                }
+    
                 </div>
               </Card.Body>
             </Card>

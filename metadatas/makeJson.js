@@ -7,6 +7,7 @@ function getRarity(i) {
   if(i <= 200){
     return "Legendary"
   } 
+
   else if(i <= 1000){
     return "Epic"
   } 
@@ -28,7 +29,7 @@ function getRarity(i) {
 
 async function makeData() {
 
-  for (var i = 0; i <= 10000; i++) {
+  for (var i = 1; i <= 10000; i++) {
     content.push({
       description: "Ce LEAF TREE à déjà donné vie à 10 arbres dans le monde réel et si tu fais 10 000 pas aujourd'hui, il te donnera 6 LEAFs. Des LEAFs qui permettront de planter de nouveaux arbres. Alors lève toi et marche!",
       image: 'https://ipfs.io/ipfs/QmRGKxAu2KsTQG3G4zXKrCowSs8pgaCJ1yU3rPYHraHNiq',
@@ -42,7 +43,7 @@ async function makeData() {
     })
   }
   var json = JSON.stringify(content)
-  fs.writeFile('file.json', json, (err) => {
+  fs.writeFile('metadatas.json', json, (err) => {
     if (err) {
       console.error(err)
       return

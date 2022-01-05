@@ -22,7 +22,7 @@ contract LeafNFT is ERC721Enumerable, Ownable, ERC2981PerTokenRoyalties {
     mapping(uint256 => uint256) tokenIDMap;
     mapping(uint256 => uint256) takenImages;
 
-    string baseUri = "ipfs://0xE49BBECF4ff55c8e85df733080FA9B316FfF4cd3/";
+    string baseUri = "ipfs://QmSFMeDDejtnt78ETUGvs32ppFHXQFqhSV9hB1ZuiLte91/";
     uint256 public minted = 0;
     bool public canClaim = false;
     uint256 gross = 0;

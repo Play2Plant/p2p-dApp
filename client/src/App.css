@@ -1,15 +1,16 @@
 .App {
   text-align: center;
-  width:300px;
-  margin: 3em auto;
-  padding: 3em;
-  background: #232a35;
-  color: #5ced86;
-  border: 1px solid black;
 }
 
 .App-logo {
   height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 .App-header {
@@ -24,17 +25,14 @@
 }
 
 .App-link {
-  color: #09d3ac;
+  color: #61dafb;
 }
 
-.leafMonney{
-  color: green;
-  font-weight: bold;
-}
-.imageTreeNFT{
-  padding: 2em 0;
-}
-.addressUser{
-  font-size: 10px;
-  text-align: rigth;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

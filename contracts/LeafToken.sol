@@ -8,7 +8,7 @@ import '@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol';
  * @title ERC20 smart contract of the Ethereum based $LEAF Token
  * @dev The token uses the library of openzeppelin for secure smart contract development. Token can be burned.
  */
-contract Leaf is ERC20, ERC20Burnable {
+contract LeafToken is ERC20, ERC20Burnable {
 
     /**
      * @dev Initializes the contract. The token has an initial supply fixed at 150.000.000 $LEAFS.

@@ -118,13 +118,13 @@ const NFT = () => {
              <h1>My NFT</h1>
           {nftList.map((item, i) => (
               <Col
-              xs={4}
-              md={4}
-              lg={4}
+              xs={12}
+              md={8}
+              lg={8}
               className="d-flex justify-content-center"
               style={{ marginTop: '20px' }}
             >
-              <Card key={i} style={{ width: '18rem' }}>
+              <Card key={i} style={{ width: '25rem' }}>
                 <Card.Img variant="top" src={item.image} />
                 <Card.Body>
                   <Card.Title>{item.name}</Card.Title>

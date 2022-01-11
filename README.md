@@ -1,89 +1,47 @@
+# 🍃 Leaf DApp
 
-# Leaf dApp
+Build with Truffle and ReactJS ⚛️
 
-  
+## 🔧 Installation
 
-Build with truffle and reactJS
+* Get the code:
 
-  
+`git clone git@github.com:Play2Plant/leaf-website.git`
 
-![screenshot](screenshot.png)
+* Installation JS package:
 
-  
+`npm i`
 
-## Get the code
+## 🔧 Copy and Configure .env file with your credentials
 
-```
+`cp .exemple.env .env`
 
-git clone git@github.com:Play2Plant/leaf-website.git
-
-```
-
-  
-
-## Installation JS package
+## ⚙️ Install client dependencies
 
 ```
-
-cd leaf-website/
-npm i
-
-```
-
-## Copy and Configure .env file with your credentials
-
-```
-cp .exemple.env .env
-```
-
-## Deploy on Ropsten tesnet
-```
-cd leaf-website/
-truffle deploy --ropsten
-
-```
-
-## Deploy on AVAX tesnet
-```
-cd leaf-website/
-truffle deploy --avax-testnet
-
-```
-
-
-## Run contracts tests with Truffle
-
-```
-cd leaf-website/
-truffle test
-
-```
-  
-
-## Install client dependencies
-
-```
-
 cd client/
-
 npm install
-
 ```
 
-  
-
-## Start dApp
+## 🚀 Start DApp
 
 ```
-
 cd client/
-
 npm start
-
 ```
 
-  
+## 🕸️ Deploy on Ropsten testnet
 
-## Deploy on github pages
+`truffle deploy --ropsten`
+
+## 🕸️ Deploy on AVAX testnet
+
+`truffle deploy --avax-testnet`
+
+## 🧪 Run contracts tests with Truffle
+
+`truffle test`
+
+## 📜 Deploy on GitHub pages
 
 `npm run deploy`

@@ -25,13 +25,19 @@ const mnemonic = process.env.MNEMONIC.trim();
 
 module.exports = {
     networks: {
-       dev: {
+        dev: {
           host: "localhost",
           port: 8545,
           network_id: "*",
           websockets: true
-       },
-        testnet: {
+        },
+    	ropsten: {
+     	  provider: function() {
+       	    return new HDWalletProvider(`${process.env.MNEMONIC_INFURA}`, `https://ropsten.infura.io/v3/${process.env.INFURA_ID}`)
+     	  },
+     	  network_id: 3
+    	}
+        avax-testnet: {
             provider: () =>
             new HDWalletProvider(
                 mnemonic,
@@ -46,7 +52,7 @@ module.exports = {
             confirmations: 10,
             skipDryRun: true,
         },
-        // mainnet: {
+        // avax-mainnet: {
         //     provider: () =>
         //     new HDWalletProvider(
         //         mnemonic,

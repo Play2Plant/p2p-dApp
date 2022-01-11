@@ -11,17 +11,17 @@ Build with truffle and reactJS
 
   
 
-## Installation without solidity contract
+## Get the code
 
 ```
 
-git clone git@github.com:Play2Plant/dApp-unbox.git
+git clone git@github.com:Play2Plant/leaf-website.git
 
 ```
 
   
 
-## Installation with solidity contract and compilation tools
+## Installation JS package
 
 ```
 
@@ -30,15 +30,34 @@ npm i
 
 ```
 
-## Run contracts tests with Truffle
+## Copy and Configure .env file with your credentials
+
+```
+cp .exemple.env .env
+```
+
+## Deploy on Ropsten tesnet
+```
+cd leaf-website/
+truffle deploy --ropsten
 
 ```
 
+## Deploy on AVAX tesnet
+```
+cd leaf-website/
+truffle deploy --avax-testnet
+
+```
+
+
+## Run contracts tests with Truffle
+
+```
 cd leaf-website/
 truffle test
 
 ```
-
   
 
 ## Install client dependencies

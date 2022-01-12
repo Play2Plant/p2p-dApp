@@ -15,3 +15,5 @@ It includes the following checks:
 * The ability to check the balance of a holder
 * The ability to transfer tokens between addresses
 * The ability to burn chips
+
+Link to the tests : [LeafToken.test.js](https://github.com/Play2Plant/leaf-website/blob/documentation/test/LeafToken.test.js)

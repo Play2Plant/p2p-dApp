@@ -3,7 +3,7 @@
 * Run the tests with the command: `truffle test`
 * The tests carried out with the Truffle framework are written in JavaScript and verify all the proposed functionalities.
 
-##  Summary of tests provided for the ERC20 part
+##  Summary of tests provided for the Token part
 
 It includes the following checks: 
 

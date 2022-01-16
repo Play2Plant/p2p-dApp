@@ -37,6 +37,31 @@
   }
 }
 
+.marketPlaceTree{
+    justify-content: center;
+}
 .card {
-    padding: 2rem;
+    background-color: transparent !important;
+    padding: 5rem 8rem 0 8rem;
+    border: none !important;
+}
+.nftLeaf .card{
+    width: 580px;
+    height: 700px;
+    margin: auto;
+    background: url("./assets/img/board.png") no-repeat;
+}
+.nftLeaf .card-title{
+    color: #FFF;
+}
+.nftLeaf .card-body{
+    text-align: center;
+    padding: 1rem;
+    padding-left: 2.5rem;
+}
+.ntfLeaf .card-img-top {
+    padding: 1rem;
+}
+.nftLeaf .card-text{
+    color: #FFF;
 }

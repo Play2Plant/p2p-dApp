@@ -21,8 +21,6 @@ ReactDOM.render(
         <Route path="/about" component={About} />
         <Route path="/nft" component={Marketplace} />
         <Route path="/leaf" component={Leaf} />
-
-        
       </Switch>
     </Router>
   </React.StrictMode>,

@@ -114,17 +114,16 @@ const NFT = () => {
   return (
     <Container>
         {list.length > 0 ? (
-             <Row>
-             <h1>My NFT</h1>
+             <Row className="marketPlaceTree">
           {nftList.map((item, i) => (
               <Col
               xs={12}
               md={8}
               lg={8}
-              className="d-flex justify-content-center"
+              className="d-flex justify-content-center nftLeaf"
               style={{ marginTop: '20px' }}
             >
-              <Card key={i} style={{ width: '25rem' }}>
+              <Card key={i}>
                 <Card.Img variant="top" src={item.image} />
                 <Card.Body>
                   <Card.Title>{item.name}</Card.Title>

@@ -1,4 +1,4 @@
-# 🍃 Play 2 Plant DApp
+# 🍃 Play 2 Plant dApp
 
 ## Présentation
 * Une application qui réunit gaming, santé, environnement et DeFi
@@ -26,7 +26,7 @@
 
 ## 🔧 Installation
 
-# Web dApp build with ReactJS :
+### Web dApp was build with ReactJS :
 
 * Get the code:
 

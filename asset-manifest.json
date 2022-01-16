@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/p2p-dApp/static/css/main.4ab9e51a.chunk.css",
+    "main.js": "/p2p-dApp/static/js/main.651bcd7a.chunk.js",
+    "main.js.map": "/p2p-dApp/static/js/main.651bcd7a.chunk.js.map",
+    "runtime-main.js": "/p2p-dApp/static/js/runtime-main.2d4e0740.js",
+    "runtime-main.js.map": "/p2p-dApp/static/js/runtime-main.2d4e0740.js.map",
+    "static/css/2.d6008dad.chunk.css": "/p2p-dApp/static/css/2.d6008dad.chunk.css",
+    "static/js/2.a526711a.chunk.js": "/p2p-dApp/static/js/2.a526711a.chunk.js",
+    "static/js/2.a526711a.chunk.js.map": "/p2p-dApp/static/js/2.a526711a.chunk.js.map",
+    "index.html": "/p2p-dApp/index.html",
+    "static/css/2.d6008dad.chunk.css.map": "/p2p-dApp/static/css/2.d6008dad.chunk.css.map",
+    "static/css/main.4ab9e51a.chunk.css.map": "/p2p-dApp/static/css/main.4ab9e51a.chunk.css.map",
+    "static/js/2.a526711a.chunk.js.LICENSE.txt": "/p2p-dApp/static/js/2.a526711a.chunk.js.LICENSE.txt",
+    "static/media/tree.b35c35f5.png": "/p2p-dApp/static/media/tree.b35c35f5.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2d4e0740.js",
+    "static/css/2.d6008dad.chunk.css",
+    "static/js/2.a526711a.chunk.js",
+    "static/css/main.4ab9e51a.chunk.css",
+    "static/js/main.651bcd7a.chunk.js"
+  ]
+}

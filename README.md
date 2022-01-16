@@ -67,8 +67,11 @@ npm start
 `truffle test`
 
 ## 📜 Deploy on GitHub pages
-
-`npm run deploy`
+```
+cd client/
+npm install gh-pages --save-dev
+npm run deploy
+```
 
 ## 🤝 Team
 

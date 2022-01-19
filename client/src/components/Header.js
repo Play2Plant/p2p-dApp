@@ -45,19 +45,19 @@ const Header = () => {
       <Navbar.Collapse id="basic-navbar-nav">
 
         <Nav className="mr-auto">
-          <LinkContainer to="./mint">
+          <LinkContainer to="/mint">
             <Nav.Link>Mint</Nav.Link>
           </LinkContainer>
-          <LinkContainer to="./nft">
+          <LinkContainer to="/nft">
             <Nav.Link>NFT</Nav.Link>
           </LinkContainer>
-          <LinkContainer to="./leaf">
+          <LinkContainer to="/leaf">
             <Nav.Link>Leaf</Nav.Link>
           </LinkContainer>
-          <LinkContainer to="./service">
+          <LinkContainer to="/service">
             <Nav.Link>Service</Nav.Link>
           </LinkContainer>
-          <LinkContainer to="./about">
+          <LinkContainer to="/about">
             <Nav.Link>About</Nav.Link>
           </LinkContainer>
 

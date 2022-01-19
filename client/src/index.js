@@ -17,11 +17,11 @@ ReactDOM.render(
       <Header/>
       <Switch>
         <Route exact path="/" component={App} />
-        <Route path="/service" component={Service} />
-        <Route path="/about" component={About} />
         <Route path="/mint" component={Mint} />
         <Route path="/nft" component={Marketplace} />
         <Route path="/leaf" component={Leaf} />
+        <Route path="/service" component={Service} />
+        <Route path="/about" component={About} />
       </Switch>
     </Router>
   </React.StrictMode>,

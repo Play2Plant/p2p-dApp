@@ -188,7 +188,7 @@ console.log(nftList);
           </div>
         }
 
-        { player === true && (
+        { player == true && (
           console.log('player true')
         )}
 

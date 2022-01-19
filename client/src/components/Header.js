@@ -38,7 +38,7 @@ const Header = () => {
 
   return (
     <Navbar bg="light" expand="lg">
-      <LinkContainer to="/">
+      <LinkContainer to="/app">
         <Navbar.Brand>Home</Navbar.Brand>
       </LinkContainer>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />

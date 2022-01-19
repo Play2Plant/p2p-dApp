@@ -13,10 +13,10 @@ import Mint from './components/Mint'
 
 ReactDOM.render(
   <React.StrictMode>
-       <Router>
+    <Router>
       <Header/>
       <Switch>
-        <Route exact path="/" component={App} />
+        <Route exact path="/app" component={App} />
         <Route path="/mint" component={Mint} />
         <Route path="/nft" component={Marketplace} />
         <Route path="/leaf" component={Leaf} />

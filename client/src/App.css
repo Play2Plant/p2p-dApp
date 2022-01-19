@@ -1,3 +1,4 @@
+/* App */
 .App {
   text-align: center;
 }
@@ -27,7 +28,28 @@
 .App-link {
   color: #61dafb;
 }
-
+.appP2P{
+  display: flex;
+  flex-direction: row;
+}
+.appP2P > div{
+  width: 50%;
+  align-items: center;
+  background: #FFF;
+  margin: 3rem;
+  padding: 2rem;
+  border-radius: 10px;
+  opacity: 68%;
+  font-weight: bold;
+}
+.appP2P > div:first-child{
+  background-color: #000;
+  color: #FFF;
+}
+.appP2P > div:last-child{
+  background-color: #FFF;
+  color: #000;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,7 +58,7 @@
     transform: rotate(360deg);
   }
 }
-
+/* MarketPlace */
 .marketPlaceTree{
     justify-content: center;
 }

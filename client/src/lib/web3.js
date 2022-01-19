@@ -13,7 +13,7 @@ let nftContract;
 // testnet 0xa869
 // mainnet 0xa86a
 
-const id_network = '43113'
+const id_network = 43113
 const opcode_network = '0xa869'
 
 export const init = async () => {
@@ -104,6 +104,7 @@ export const checkNetwork = async () => {
         network = "avax"
       } else {
         network = "not-avax"
+        console.log("network is : " + id_network);
       }
       return network 
     })
@@ -215,7 +216,7 @@ export const withdraw = async () => {
 
   return await operand.send(params)
   .on('error', function (error) {
-      if (error.code == -32602) {
+      if (error.code === -32602) {
           params.type = "0x0";
           params.maxFeePerGas = null;
           params.maxPriorityFeePerGas= null;

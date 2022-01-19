@@ -63,7 +63,7 @@ const Header = () => {
 
         </Nav>
 
-        {address && network != "avax" &&
+        {address && network !== "avax" &&
           <Button onClick={() => switchNetwork()}>
              Switch Network
            </Button>

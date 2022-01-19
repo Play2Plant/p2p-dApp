@@ -30,7 +30,7 @@ export const init = async () => {
     })
 
     window.ethereum.on('chainChanged', function (network) {
-        if (network == opcode_network) {
+        if (network === opcode_network) {
             network = "avax"
         } else {
             network = "not-avax"
@@ -58,7 +58,7 @@ export const connectWallet = async () => {
       if (accounts[0]) {
         let web3 = new Web3(window.ethereum)
         await web3.eth.getChainId().then(async (network) => {
-          if (network == id_network) {
+          if (network === id_network) {
             network = "avax"
           } else {
             network = "not-avax"
@@ -100,7 +100,7 @@ export const checkNetwork = async () => {
 
     // Check if User is already connected by retrieving the accounts
     return await web3.eth.getChainId().then(async (network) => {
-      if (network == id_network) {
+      if (network === id_network) {
         network = "avax"
       } else {
         network = "not-avax"
@@ -119,7 +119,7 @@ export const checkConnection = async () => {
     web3 = new Web3(window.ethereum)
 
     await web3.eth.getChainId().then(async (network) => {
-      if (network == id_network ) {
+      if (network === id_network ) {
         network = "avax"
       } else {
         network = "not-avax"

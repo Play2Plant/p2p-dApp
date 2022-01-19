@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Row, Col, Container, Card, Button } from 'react-bootstrap'
-import tree from '../assets/img/tree.png'
 import {
   request_mintNft,
   request_totalSupply,

@@ -16,7 +16,7 @@ ReactDOM.render(
     <Router>
       <Header/>
       <Switch>
-        <Route exact path="/app" component={App} />
+        <Route path="/app" component={App} />
         <Route path="/mint" component={Mint} />
         <Route path="/nft" component={Marketplace} />
         <Route path="/leaf" component={Leaf} />

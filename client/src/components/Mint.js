@@ -126,32 +126,37 @@ console.log(nftList);
   return (
     <Container>
 
-        {address && network !== "avax" &&
-          <Button onClick={() => switchNetwork()}>
-            Switch Network
-          </Button>
+        {!address &&
+          <div className='mintPage'>
+            <div className='connect'>
+              Vous devez vous connectez avec votre wallet AVAX
+            </div>
+            <div>
+              <Button onClick={() => storeAddress()}>
+                Connect
+              </Button>
+            </div>
+          </div>
         }
 
-                  {address && network === "avax" &&
-                    <Button
-                      disabled={loading}
-                      variant="primary"
-                      onClick={() => mint()}
-                    >
-                      Mint {price}{' '}
-                    </Button>
-                  }
-
-                {!address &&
-                  <Button onClick={() => storeAddress()}>
-                    Connect
-                  </Button>
-                }
-
-
-        { player == true ? (
-             <Row className="marketPlaceTree">
-             {nftList.map((item, i) => (
+        {address && network !== "avax" &&
+          <div className='mintPage'>
+            <p>
+              Vous devez mint ce NFT sur le reseau AVAX
+            </p>
+            <Button onClick={() => switchNetwork()}>
+              Switch Network
+            </Button>
+          </div>
+        }
+        
+        {address && network === "avax" &&
+          <div>
+            <div className='mintPage'>
+              <h1>Mint your first tree</h1>
+              <div>{limit - totalSupply} / 10000 restant</div>
+            </div>
+            <Row className="marketPlaceTree">
               <Col
                 xs={12}
                 md={8}
@@ -159,62 +164,34 @@ console.log(nftList);
                 className="d-flex justify-content-center nftLeaf"
                 style={{ marginTop: '20px' }}
               >
-              <Card key={i}>
-                <Card.Img variant="top" src={item.image} />
-                <Card.Body>
-                  <Card.Title>{item.name}</Card.Title>
-                  <Card.Text>{item.description}</Card.Text>
-                  <div className="d-flex justify-content-center">
-                    {/* <Button
-                        disabled={loading}
-                        variant="primary"
-                        onClick={() => mint()}
-                    >
-                        Mint {price}{' '}
-                    </Button> */}
-                  </div>
-                </Card.Body>
-              </Card>
+                <Card>
+                  <Card.Img variant="top" src={tree} />
+                  <Card.Body>
+                    <Card.Title>Tree NFT</Card.Title>
+                    <Card.Text>
+                      Ce LEAF TREE à déjà donné vie à 10 arbres dans le monde réel
+                      et si tu fais 10 000 pas aujourd'hui, il te donnera 6 LEAFs.
+                      Des LEAFs qui permettront de planter de nouveaux arbres. Alors
+                      lève toi et marche!
+                    </Card.Text>
+                  </Card.Body>
+                  <Button
+                    disabled={loading}
+                    variant="primary"
+                    onClick={() => mint()}
+                  >
+                    Mint {price}{' '}
+                  </Button>
+                </Card>
               </Col>
-             ))}
-             </Row>
-        ) : (
-		<Row></Row>
-	)}
+              </Row>
+          </div>
+        }
 
-         { network == "avax" ? (
-              <Row className="marketPlaceTree">
-                  <h1>Mint your first tree</h1>
-                <Col
-                  xs={12}
-                  md={8}
-                  lg={8}
-                  className="d-flex justify-content-center nftLeaf"
-                  style={{ marginTop: '20px' }}
-                >
-                    <Card>
-                        <Card.Img variant="top" src={tree} />
-                        <Card.Body>
-                            <Card.Title>Tree NFT</Card.Title>
-                            <Card.Text>
-                                Ce LEAF TREE à déjà donné vie à 10 arbres dans le monde réel
-                                et si tu fais 10 000 pas aujourd'hui, il te donnera 6 LEAFs.
-                                Des LEAFs qui permettront de planter de nouveaux arbres. Alors
-                                lève toi et marche!
-                            </Card.Text>
-                <div>{limit - totalSupply} / 10000 restant</div>
-                <br></br>
-                <div className="d-flex justify-content-center">
+        { player == true && (
+          console.log('player true')
+        )}
 
-    
-                </div>
-              </Card.Body>
-            </Card>
-            </Col>
-            </Row>
-        ) : (
-		<Row></Row>
-	)}
     </Container>
   )
 }

@@ -113,6 +113,31 @@ const NFT = () => {
 
   return (
     <Container>
+
+        {!address &&
+          <div className='mintPage'>
+            <div className='connect'>
+              Vous devez vous connectez avec votre wallet AVAX
+            </div>
+            <div>
+              <Button onClick={() => storeAddress()}>
+                Connect
+              </Button>
+            </div>
+          </div>
+        }
+
+        {address && network !== "avax" &&
+          <div className='mintPage'>
+            <p>
+              Vous devez mint ce NFT sur le reseau AVAX
+            </p>
+            <Button onClick={() => switchNetwork()}>
+              Switch Network
+            </Button>
+          </div>
+        }
+
         {list.length > 0 ? (
              <Row className="marketPlaceTree">
           {nftList.map((item, i) => (
@@ -144,54 +169,12 @@ const NFT = () => {
         
           </Row>
         ) : (
-            <Row>
-                <h1>Mint your first tree</h1>
-            <Col
-                  className="d-flex justify-content-center"
-                  style={{ marginTop: '20px' }}
-                >
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={tree} />
-              <Card.Body>
-                <Card.Title>Tree NFT</Card.Title>
-                <Card.Text>
-                  Ce LEAF TREE à déjà donné vie à 10 arbres dans le monde réel
-                  et si tu fais 10 000 pas aujourd'hui, il te donnera 6 LEAFs.
-                  Des LEAFs qui permettront de planter de nouveaux arbres. Alors
-                  lève toi et marche!
-                </Card.Text>
-                <div>{limit - totalSupply} / 10000 restant</div>
-                <br></br>
-                <div className="d-flex justify-content-center">
-
-                
-                {address && network !== "avax" &&
-                  <Button onClick={() => switchNetwork()}>
-                    Switch Network
-                  </Button>
-                }
-
-                  {address && network === "avax" &&
-                    <Button
-                      disabled={loading}
-                      variant="primary"
-                      onClick={() => mint()}
-                    >
-                      Mint {price}{' '}
-                    </Button>
-                  }
-
-                {!address &&
-                  <Button onClick={() => storeAddress()}>
-                    Connect
-                  </Button>
-                }
-    
-                </div>
-              </Card.Body>
-            </Card>
-            </Col>
-            </Row>
+          <div>
+              <div className='mintPage'>
+                <h1>Vous n'avez pas encore de Tree NFT</h1>
+                <a href="./mint">Allez dans la pepiniere pour obtenir une graine</a>
+              </div>
+          </div>
         )}
     </Container>
   )

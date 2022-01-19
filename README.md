@@ -30,7 +30,7 @@
 
 * Get the code:
 
-`git clone git@github.com:Play2Plant/leaf-website.git`
+`git clone https://github.com/Play2Plant/p2p-dApp.git`
 
 * Installation JS package:
 

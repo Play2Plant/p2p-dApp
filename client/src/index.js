@@ -9,7 +9,7 @@ import Service from './components/Service'
 import About from './components/About'
 import Marketplace from './components/Marketplace'
 import Leaf from './components/Leaf'
-
+import Mint from './components/Mint'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,6 +19,7 @@ ReactDOM.render(
         <Route exact path="/" component={Marketplace} />
         <Route path="/service" component={Service} />
         <Route path="/about" component={About} />
+        <Route path="/mint" component={Mint} />
         <Route path="/nft" component={Marketplace} />
         <Route path="/leaf" component={Leaf} />
       </Switch>

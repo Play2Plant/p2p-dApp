@@ -45,13 +45,15 @@ const Header = () => {
       <Navbar.Collapse id="basic-navbar-nav">
 
         <Nav className="mr-auto">
-        <LinkContainer to="./leaf">
-            <Nav.Link>Leaf</Nav.Link>
+          <LinkContainer to="./mint">
+            <Nav.Link>Mint</Nav.Link>
           </LinkContainer>
           <LinkContainer to="./nft">
             <Nav.Link>NFT</Nav.Link>
           </LinkContainer>
-
+          <LinkContainer to="./leaf">
+            <Nav.Link>Leaf</Nav.Link>
+          </LinkContainer>
           <LinkContainer to="./service">
             <Nav.Link>Service</Nav.Link>
           </LinkContainer>
@@ -78,7 +80,6 @@ const Header = () => {
              Connect
            </Button>
         }
-    
 
       </Navbar.Collapse>
     </Navbar>

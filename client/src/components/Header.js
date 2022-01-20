@@ -57,6 +57,9 @@ const Header = () => {
           <LinkContainer to="/service">
             <Nav.Link>Service</Nav.Link>
           </LinkContainer>
+          <LinkContainer to="/roadmap">
+            <Nav.Link>Roadmap</Nav.Link>
+          </LinkContainer>
           <LinkContainer to="/about">
             <Nav.Link>About</Nav.Link>
           </LinkContainer>

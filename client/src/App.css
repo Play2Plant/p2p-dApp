@@ -50,16 +50,6 @@
   background-color: #FFF;
   color: #000;
 }
-.roadmap {
-  align-items: center;
-  background: #FFF;
-  margin: 3rem;
-  padding: 2rem;
-  border-radius: 10px;
-  opacity: 68%;
-  font-weight: bold;
-  text-align: center;
-}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -67,6 +57,17 @@
   to {
     transform: rotate(360deg);
   }
+}
+/* Roadmap */
+.roadmap {
+    align-items: center;
+    background: #FFF;
+    margin: 3rem;
+    padding: 2rem;
+    border-radius: 10px;
+    opacity: 68%;
+    font-weight: bold;
+    text-align: center;
 }
 /* MarketPlace */
 .marketPlaceTree{
@@ -106,4 +107,35 @@
   margin: 3rem;
   padding: 2rem;
   border-radius: 10px;
+}
+/* About */
+.about{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about > div{
+  width: 30%;
+  margin: 1em 0;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 10px;
+  opacity: 75%;
+  text-align: center;
+  font-size: 1.2em;
+}
+.whiteBox {
+    background: #FFF;
+    border: 3px solid black;
+    font-weight: bold;
+}
+.greenBox{
+    background: #07580d;
+    border: 3px solid black;
+    color: #FFF;
+    font-weight: bold;
+}
+.about h1{
+    font-size: 1.5rem;
 }

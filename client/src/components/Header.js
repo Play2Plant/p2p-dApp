@@ -38,7 +38,7 @@ const Header = () => {
 
   return (
     <Navbar bg="light" expand="lg">
-      <LinkContainer to="/app">
+      <LinkContainer to="/">
         <Navbar.Brand>Home</Navbar.Brand>
       </LinkContainer>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -51,11 +51,8 @@ const Header = () => {
           <LinkContainer to="/nft">
             <Nav.Link>NFT</Nav.Link>
           </LinkContainer>
-          <LinkContainer to="/leaf">
-            <Nav.Link>Leaf</Nav.Link>
-          </LinkContainer>
-          <LinkContainer to="/service">
-            <Nav.Link>Service</Nav.Link>
+          <LinkContainer to="/team">
+            <Nav.Link>Team</Nav.Link>
           </LinkContainer>
           <LinkContainer to="/roadmap">
             <Nav.Link>Roadmap</Nav.Link>
@@ -63,7 +60,6 @@ const Header = () => {
           <LinkContainer to="/about">
             <Nav.Link>About</Nav.Link>
           </LinkContainer>
-
         </Nav>
 
         {address && network != "avax" &&

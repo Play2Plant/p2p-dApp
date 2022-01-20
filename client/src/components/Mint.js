@@ -169,7 +169,7 @@ console.log(nftList);
                   <Card.Body>
                     <Card.Title>Tree NFT</Card.Title>
                     <Card.Text>
-                      Ce LEAF TREE à déjà donné vie à 10 arbres dans le monde réel
+                      Ce LEAF TREE a déjà donné vie à 10 arbres dans le monde réel
                       et si tu fais 10 000 pas aujourd'hui, il te donnera 6 LEAFs.
                       Des LEAFs qui permettront de planter de nouveaux arbres. Alors
                       lève toi et marche!

@@ -67,6 +67,9 @@ npm start
 `truffle test`
 
 ## 📜 Deploy on GitHub pages
+
+[Play 2 Plant dApp](https://play2plant.github.io/p2p-dApp/)
+
 ```
 cd client/
 npm install gh-pages --save-dev

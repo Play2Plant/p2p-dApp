@@ -8,7 +8,7 @@ const Roadmap = () => {
             <h2>Décembre 2021 - Janvier 2022</h2>
             <h2>POC</h2>
             <ul>
-                <li>Concept <i>13 décembre 2021</i></li>
+                <li>Concept</li><i>13 décembre 2021</i>
                 <li>Business plan</li>
                 <li>White paper</li>
                 <li>NFT</li>
@@ -20,9 +20,9 @@ const Roadmap = () => {
             <h2>Q1/Q2 2022</h2>
             <h2>LEAF Company</h2>
             <ul>
-                <li>Communication (Site web/réseaux sociaux/Discord/Twitter) <i>Q1/Q2</i></li>
-                <li>Constitution de la LEAF company <i>Q1/Q2</i></li>
-                <li>Choix/partenariat avec l'association <i>Q1/Q2</i></li>
+                <li>Communication (Site web/réseaux sociaux/Discord/Twitter)</li><i>Q1/Q2</i>
+                <li>Constitution de la LEAF company</li><i>Q1/Q2</i>
+                <li>Choix/partenariat avec l'association</li><i>Q1/Q2</i>
             </ul>
             <hr></hr>
             <h2>Q3 2022</h2>
@@ -38,7 +38,7 @@ const Roadmap = () => {
             <ul>
                 <li>Teasing lancement du jeu</li><i>Q4 2022</i>
                 <li>Développements ++ (NFT asso/niveaux/marketplace/rareté)</li><i>Q4</i>
-                <li>Ventes publiques 🚀 <i>31 décembre 2022</i></li>
+                <li>Ventes publiques 🚀</li><i>31 décembre 2022</i>
             </ul>
             <hr></hr>
             <h2>Q1 2023</h2>

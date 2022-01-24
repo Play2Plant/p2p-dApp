@@ -59,6 +59,9 @@
   }
 }
 /* Roadmap */
+ul {
+  list-style-type: none;
+}
 .roadmap {
     align-items: center;
     background: #FFF;

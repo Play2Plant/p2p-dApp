@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { init, connectWallet, checkConnection , switchChain , checkNetwork} from "../lib/web3";
+import Pdf from '../assets/doc/LitePaper.pdf';
 
 const Header = () => {
   const [address, setAddress] = useState('');
@@ -59,6 +60,9 @@ const Header = () => {
           </LinkContainer>
           <LinkContainer to="/about">
             <Nav.Link>About</Nav.Link>
+          </LinkContainer>
+          <LinkContainer to="/lite-paper">
+            <Nav.Link>Lite Paper</Nav.Link>
           </LinkContainer>
         </Nav>
 

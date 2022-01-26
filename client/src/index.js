@@ -11,6 +11,7 @@ import Marketplace from './components/Marketplace'
 import Leaf from './components/Leaf'
 import Mint from './components/Mint'
 import Roadmap from './components/Roadmap'
+import Litepaper from './components/Litepaper'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -24,10 +25,9 @@ ReactDOM.render(
         <Route path="/nft" component={Marketplace} />
         <Route path="/mint" component={Mint} />
         <Route path="/leaf" component={Leaf} />
+        <Route path="/lite-paper" component={Litepaper} />
       </Switch>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-

@@ -16,7 +16,7 @@ const service = () => {
               </ul>
             </div>
             <div className="greenBox">
-              <h1>NicolasVILLA</h1>
+              <h1>Nicolas VILLA</h1>
               <ul>
                 <li>Dev PHP/JS WEB/LINUX</li>
                 <li>CMS & Frameworks PHP</li>
@@ -42,7 +42,7 @@ const service = () => {
               </ul>
             </div>
             <div className="whiteBox">
-              <h1>Sylvain Rey</h1>
+              <h1>Sylvain REY</h1>
               <ul>
                 <li>Dev Android</li>
                 <li>Frameworks</li>

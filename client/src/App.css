@@ -58,6 +58,16 @@
     transform: rotate(360deg);
   }
 }
+/* Lite Paper */
+.litepaper {
+  margin: 3rem;
+}
+iframe {
+  width: 100%;
+  height: 50rem;
+  border:5px solid #85B55A;
+  border-radius: 1rem;
+}
 /* Roadmap */
 ul {
   list-style-type: none;
